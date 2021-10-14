@@ -57,6 +57,30 @@ class D {
     return this._date.getDate()
   }
 
+  get hours() {
+    return padWithZero(this._date.getHours())
+  }
+
+  get hrs() {
+    return this._date.getHours()
+  }
+
+  get minutes() {
+    return padWithZero(this._date.getMinutes())
+  }
+
+  get mins() {
+    return this._date.getMinutes()
+  }
+
+  get seconds() {
+    return padWithZero(this._date.getSeconds())
+  }
+
+  get secs() {
+    return this._date.getSeconds()
+  }
+
   // Setters
 
   // TODO: Create Setters
@@ -66,7 +90,7 @@ class D {
   // }
 
   // Format
-  format(mask = 'Y M D') {
+  format(mask = 'M D, Y') {
     const maskArray = mask.split('')
     let dateStr = ''
     maskArray.forEach((char) => {

@@ -109,13 +109,15 @@ describe('When', () => {
   // **** Days
 
   test('D.when() - days from now', () => {
-  // const d3 = new D(today.getFullYear() + 5, today.getMonth())
-  // expect(d3.when()).toBe('5 years from now')
+    const d = new D(today.getFullYear() + 5, today.getMonth())
+    expect(d.when()).toBe('5 years from now')
   })
 
   test('D.when() - days from now', () => {
-    // const d4 = new D(2019, 6, 30, 3, 4, 5)
-    // expect(d4.when()).toBe('3 days from now')
+    const now = new Date()
+    now.setDate(now.getDate() - 3)
+    const d = new D(now)
+    expect(d.when()).toBe('3 days from now')
   })
 
 
