@@ -155,7 +155,7 @@ class D {
     // monthsdiff = 5
 
     if (dm > 11) {
-      return `${dy} year${dy > 1 ? 's' : ''} from now`
+      return `${Math.abs(dy)} year${dy > 1 ? 's' : ''} from now`
     } else if (dm < -11) {
       return `${Math.abs(dy)} year${dy < -1 ? 's' : ''} ago`
     } else if (dm > 0) {
@@ -165,7 +165,7 @@ class D {
     } else if (dd > 0) {
       return `${dd} days ago`
     } else if (dd < 0) {
-      return `${dd} days from now`
+      return `${Math.abs(dd)} days from now`
     } else {
       return 'today'
     }

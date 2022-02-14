@@ -40,7 +40,7 @@ describe('Format', () => {
   const d = new D(2017, 0, 2, 3, 4, 5)
 
   test('D.format() - default format', () => {
-    expect(d.format()).toBe('2017 January 02')
+    expect(d.format()).toBe('January 02, 2017')
   })
 
   test('D.format()', () => {
