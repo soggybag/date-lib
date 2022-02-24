@@ -6,31 +6,31 @@ const epoch = new D(0)
 
 describe('Getters', () => {
   test('Year', () => {
-    expect(epoch.year).toBe(1969)
+    expect(epoch.year).toBe(1970)
   })
 
   test('short year', () => {
-    expect(epoch.shortYear).toBe(69)
+    expect(epoch.shortYear).toBe(70)
   })
 
   test('month', () => {
-    expect(epoch.month).toBe('December')
+    expect(epoch.month).toBe('January')
   })
 
   test('short month', () => {
-    expect(epoch.shortMonth).toBe('Dec')
+    expect(epoch.shortMonth).toBe('Jan')
   })
 
   test('day', () => {
-    expect(epoch.day).toBe('Thursday')
+    expect(epoch.day).toBe('Friday')
   })
 
   test('short day', () => {
-    expect(epoch.shortDay).toBe('Thu')
+    expect(epoch.shortDay).toBe('Fir')
   })
 
   test('date', () => {
-    expect(epoch.date).toBe(31)
+    expect(epoch.date).toBe(1)
   })
 })
 
