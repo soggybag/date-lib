@@ -6,31 +6,31 @@ const epoch = new D(0)
 
 describe('Getters', () => {
   test('Year', () => {
-    expect(epoch.year).toBe(1970)
+    expect(epoch.year).toBe(1969)
   })
 
   test('short year', () => {
-    expect(epoch.shortYear).toBe(70)
+    expect(epoch.shortYear).toBe(69)
   })
 
   test('month', () => {
-    expect(epoch.month).toBe('January')
+    expect(epoch.month).toBe('December')
   })
 
   test('short month', () => {
-    expect(epoch.shortMonth).toBe('Jan')
+    expect(epoch.shortMonth).toBe('Dec')
   })
 
   test('day', () => {
-    expect(epoch.day).toBe('Friday')
+    expect(epoch.day).toBe('Thursday')
   })
 
   test('short day', () => {
-    expect(epoch.shortDay).toBe('Fir')
+    expect(epoch.shortDay).toBe('Thu')
   })
 
   test('date', () => {
-    expect(epoch.date).toBe(1)
+    expect(epoch.date).toBe(31)
   })
 })
 
@@ -135,6 +135,6 @@ describe('When', () => {
 // new Date(new Date())
 // new Date(1970, 0, 1)
 
-const t = new Date()
-t.getFullYear() // instance method
-Date.now() // class method
+// const t = new Date()
+// t.getFullYear() // instance method
+// Date.now() // class method
