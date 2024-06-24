@@ -4,3 +4,4 @@ A wrapper for the Date Object that provides easier formatting and convenience me
 
 ## todo
 - Test GH actions
+
