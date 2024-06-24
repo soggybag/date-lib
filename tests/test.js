@@ -2,7 +2,8 @@
 /* eslint-disable semi */
 const D = require('../dist/d')
 
-const epoch = new D(0)
+const epoch = new D(0) // December 31 1969 12:59 PM
+// const bday = new Date(1965, 8, 26, 11, 30, 20)
 
 describe('Getters', () => {
   test('Year', () => {
@@ -54,7 +55,7 @@ describe('Format', () => {
 })
 
 describe('When', () => {
-  const today = new Date()
+  const today = new Date() // now!
 
   // **** Year
 
@@ -114,8 +115,8 @@ describe('When', () => {
   })
 
   test('D.when() - days from now', () => {
-    const now = new Date()
-    now.setDate(now.getDate() - 3)
+    const now = new Date() // right now!!!!
+    now.setDate(now.getDate() - 3) // new date three days ago
     const d = new D(now)
     expect(d.when()).toBe('3 days from now')
   })
