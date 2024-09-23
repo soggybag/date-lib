@@ -1,6 +1,7 @@
 /* eslint-disable no-undef */
 /* eslint-disable semi */
-const D = require('../dist/d')
+const D = require('../dist/bundle.umd')
+// import D from '../dist/bundle.esm' 
 
 const epoch = new D(0) // December 31 1969 12:59 PM
 // const bday = new Date(1965, 8, 26, 11, 30, 20)
@@ -11,7 +12,7 @@ describe('Getters', () => {
   })
 
   test('short year', () => {
-    expect(epoch.shortYear).toBe(69)
+    expect(epoch.yr).toBe(69)
   })
 
   test('month', () => {
@@ -19,15 +20,15 @@ describe('Getters', () => {
   })
 
   test('short month', () => {
-    expect(epoch.shortMonth).toBe('Dec')
+    expect(epoch.mon).toBe('Dec')
   })
 
   test('day', () => {
-    expect(epoch.day).toBe('Thursday')
+    expect(epoch.day).toBe('Wednesday')
   })
 
   test('short day', () => {
-    expect(epoch.shortDay).toBe('Thu')
+    expect(epoch.dy).toBe('Wed')
   })
 
   test('date', () => {

@@ -10,8 +10,8 @@ interface DateConstructor
 
 const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 const monthsShort = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
-const daysShort = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+const daysShort = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
 
 function padWithZero(n: number): string {
   if (n < 10) {
@@ -24,7 +24,9 @@ class D {
   _date: Date
   // Constructor
   constructor(...args: any[]) {
-    this._date = new Date(...args)
+    // this._date = new Date(...args)
+    this._date = new Date(...(args as [number, number, number, number?, number?, number?, number?]));
+
   }
 
   // Getters
@@ -33,7 +35,7 @@ class D {
     return this._date.getFullYear()
   }
 
-  get shortYear() {
+  get yr() {
     return parseInt(this._date.getFullYear().toString().slice(-2))
   }
 
@@ -41,7 +43,7 @@ class D {
     return months[this._date.getMonth()]
   }
 
-  get shortMonth() {
+  get mon() {
     return monthsShort[this._date.getMonth()]
   }
 
@@ -49,7 +51,7 @@ class D {
     return days[this._date.getDay()]
   }
 
-  get shortDay() {
+  get dy() {
     return daysShort[this._date.getDay()]
   }
 
@@ -99,13 +101,13 @@ class D {
           dateStr += this.year
           break
         case 'y':
-          dateStr += this.shortYear
+          dateStr += this.yr
           break
         case 'M':
           dateStr += this.month
           break
         case 'm':
-          dateStr += this.shortMonth
+          dateStr += this.mon
           break
         case 'D':
           dateStr += padWithZero(this._date.getDate())
@@ -172,8 +174,8 @@ class D {
   }
 }
 
-module.exports = D
-// export default D
+// module.exports = D
+export default D
 
 
 
